@@ -4,7 +4,7 @@ A simple, clean GUI for [yt-dlp](https://github.com/yt-dlp/yt-dlp). Paste video 
 
 Built because the great yt-dlp GUIs out there kept growing features, and sometimes you just want to paste a link and press one button.
 
-![icon](icon.png)
+![Audio Grabber screenshot](screenshot.png)
 
 ## Highlights
 
