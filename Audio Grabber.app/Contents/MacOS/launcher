@@ -1,0 +1,11 @@
+#!/bin/bash
+# Audio Grabber launcher — starts the local server and opens the UI.
+DIR="$(cd "$(dirname "$0")/../Resources" && pwd)"
+
+PY="$(command -v python3)"
+if [ -z "$PY" ] || ! "$PY" -c 'import sys' 2>/dev/null; then
+  osascript -e 'display dialog "Audio Grabber needs Python 3.\n\nOpen Terminal and run:\n  xcode-select --install\n\nThen start Audio Grabber again." buttons {"OK"} default button 1 with title "Audio Grabber"'
+  exit 1
+fi
+
+exec "$PY" "$DIR/server.py"
